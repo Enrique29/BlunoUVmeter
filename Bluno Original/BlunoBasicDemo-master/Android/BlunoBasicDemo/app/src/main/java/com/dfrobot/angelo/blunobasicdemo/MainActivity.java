@@ -20,6 +20,7 @@ public class MainActivity  extends BlunoLibrary {
 	private EditText serialSendText;
 	private TextView serialReceivedText;
 	private ProgressBar ProgressBar;
+	private TextView reco;
 	private Handler handler = new Handler();
 
 	@Override
@@ -28,6 +29,7 @@ public class MainActivity  extends BlunoLibrary {
 		setContentView(R.layout.activity_main);
         onCreateProcess();														//onCreate Process by BlunoLibrary
 		ProgressBar =(ProgressBar) findViewById(R.id.progressBar);
+		reco=(TextView) findViewById(R.id.reco);
 		int color = 0xFF00FF00;
 		ProgressBar.getIndeterminateDrawable().setColorFilter(color, PorterDuff.Mode.SRC_IN);
 		ProgressBar.getProgressDrawable().setColorFilter(color, PorterDuff.Mode.SRC_IN);
@@ -129,66 +131,88 @@ public class MainActivity  extends BlunoLibrary {
 				ProgressBar.setProgress(9);
 				ProgressBar.getProgressDrawable().setColorFilter(
 						Color.parseColor("#00FF80"), android.graphics.PorterDuff.Mode.SRC_IN);
+				reco.setText(null);
+				reco.setText("Recomendación 1");
 				break;
 			case "2":
 				ProgressBar.setProgress(18);
 				ProgressBar.getProgressDrawable().setColorFilter(
 						Color.parseColor("#00FF80"), android.graphics.PorterDuff.Mode.SRC_IN);
 				//Verde Oscuro
+				reco.setText(null);
+				reco.setText("Recomendación 2");
 				break;
 			case "3":
 				ProgressBar.setProgress(27);
 				ProgressBar.getProgressDrawable().setColorFilter(
 						Color.parseColor("#80FF00"), android.graphics.PorterDuff.Mode.SRC_IN);
 				//Amarillo Claro
+				reco.setText(null);
+				reco.setText("Recomendación 3");
 				break;
 			case "4":
 				ProgressBar.setProgress(36);
 				ProgressBar.getProgressDrawable().setColorFilter(
 						Color.parseColor("#BFFF00"), android.graphics.PorterDuff.Mode.SRC_IN);
 				//Amarillo Medio
+				reco.setText(null);
+				reco.setText("Recomendación 4");
 				break;
 			case "5":
 				ProgressBar.setProgress(45);
 				ProgressBar.getProgressDrawable().setColorFilter(
 						Color.parseColor("#FFFF00"), android.graphics.PorterDuff.Mode.SRC_IN);
 				//Amarillo Oscuro
+				reco.setText(null);
+				reco.setText("Recomendación 5");
 				break;
 			case "6":
 				ProgressBar.setProgress(54);
 				ProgressBar.getProgressDrawable().setColorFilter(
 						Color.parseColor("#FFBF00"), android.graphics.PorterDuff.Mode.SRC_IN);
 				//Naraja Claro
+				reco.setText(null);
+				reco.setText("Recomendación 6");
 				break;
 			case "7":
 				ProgressBar.setProgress(63);
 				ProgressBar.getProgressDrawable().setColorFilter(
 						Color.parseColor("#FF8000"), android.graphics.PorterDuff.Mode.SRC_IN);
 				//Naranja Oscuro
+				reco.setText(null);
+				reco.setText("Recomendación 7");
 				break;
 			case "8":
 				ProgressBar.setProgress(72);
 				ProgressBar.getProgressDrawable().setColorFilter(
 						Color.parseColor("#FF4000"), android.graphics.PorterDuff.Mode.SRC_IN);
 				//Rojo Claro
+				reco.setText(null);
+				reco.setText("Recomendación 8");
 				break;
 			case "9":
 				ProgressBar.setProgress(81);
 				ProgressBar.getProgressDrawable().setColorFilter(
 						Color.parseColor("#FF0040"), android.graphics.PorterDuff.Mode.SRC_IN);
 				//Rojo Medio
+				reco.setText(null);
+				reco.setText("Recomendación 9");
 				break;
 			case "10":
 				ProgressBar.setProgress(90);
 				ProgressBar.getProgressDrawable().setColorFilter(
 						Color.parseColor("#B40431"), android.graphics.PorterDuff.Mode.SRC_IN);
 				//Rojo Oscuro
+				reco.setText(null);
+				reco.setText("Recomendación 10");
 				break;
 			case "11":
 				ProgressBar.setProgress(100);
 				ProgressBar.getProgressDrawable().setColorFilter(
 						Color.parseColor("#FF00FF"), android.graphics.PorterDuff.Mode.SRC_IN);
 				//Violeta
+				reco.setText(null);
+				reco.setText("Recomendación 11");
 				break;
 
 			}
