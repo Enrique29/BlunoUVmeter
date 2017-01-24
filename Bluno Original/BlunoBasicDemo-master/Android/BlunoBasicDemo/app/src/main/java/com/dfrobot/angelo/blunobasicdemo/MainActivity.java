@@ -127,6 +127,14 @@ public class MainActivity  extends BlunoLibrary {
 
 //		if (dato>0 && dato<12){
 		switch (theString){
+			case "0":
+				ProgressBar.setProgress(0);
+				ProgressBar.getProgressDrawable().setColorFilter(
+						Color.parseColor("#00FF80"), android.graphics.PorterDuff.Mode.SRC_IN);
+				reco.setText(null);
+				reco.setText("El sensor no detecta radiación");
+				break;
+
 			case "1":
 				ProgressBar.setProgress(9);
 				ProgressBar.getProgressDrawable().setColorFilter(
