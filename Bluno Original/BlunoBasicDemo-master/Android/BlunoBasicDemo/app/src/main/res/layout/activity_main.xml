@@ -9,18 +9,7 @@
     tools:context=".MainActivity"
     android:focusable="true"
     android:focusableInTouchMode="true"
-    android:background="@android:color/holo_blue_bright">
-
-    <ScrollView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/scrollView"
-        android:layout_below="@+id/editText2"
-        android:layout_alignStart="@+id/editText2"
-        android:layout_alignParentBottom="true"
-        android:layout_alignEnd="@+id/serialSendText">
-
-    </ScrollView>
+    android:background="#66C6E7">
 
     <Button
         android:id="@+id/buttonSerialSend"
@@ -30,6 +19,32 @@
         android:visibility="invisible"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:id="@+id/serialReveicedText"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:textSize="24sp"
+        android:paddingEnd="20dp"
+        android:padding="3dp"
+        android:layout_width="wrap_content"
+        android:paddingStart="235dp"
+        android:layout_below="@+id/buttonSerialSend"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="17dp"
+        android:textColor="#003333"/>
+
+    <Button
+        android:id="@+id/buttonScan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Scan"
+        style="@android:style/Widget.DeviceDefault.Button"
+        android:background="@color/bright_foreground_material_dark"
+        android:textColor="#003333"
+        android:elevation="0dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
 
     <ProgressBar
         style="@android:style/Widget.DeviceDefault.Light.ProgressBar.Horizontal"
@@ -44,9 +59,28 @@
         android:scrollbarSize="20dp"
         android:minHeight="20dip"
         android:maxHeight="20dip"
-        android:layout_below="@+id/buttonScan"
+        android:layout_marginTop="22dp"
+        android:layout_below="@+id/serialReveicedText"
+        android:layout_alignParentEnd="true" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView"
+        android:layout_below="@+id/textView"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="53dp" />
+        android:layout_marginTop="18dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/reco"
+            android:textColor="#003333"
+            android:layout_alignTop="@+id/scrollView"
+            android:layout_alignParentStart="true" />
+    </ScrollView>
 
     <TextView
         android:id="@+id/editText2"
@@ -57,31 +91,19 @@
         android:textSize="25sp"
         android:paddingEnd="20dp"
         android:paddingStart="0dp"
+        android:textColor="#003333"
         android:layout_alignBottom="@+id/serialReveicedText"
         android:layout_alignParentStart="true" />
 
     <TextView
-        android:id="@+id/serialReveicedText"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:textSize="24sp"
-        android:paddingEnd="20dp"
-        android:padding="3dp"
-        android:layout_width="wrap_content"
-        android:paddingStart="235dp"
-        android:text="11"
-        android:layout_below="@+id/buttonSerialSend"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="17dp" />
-
-    <Button
-        android:id="@+id/buttonScan"
+        android:text="Recomendaciones:"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Scan"
-        android:layout_alignParentTop="true"
-        android:layout_toEndOf="@+id/scrollView"
-        style="?android:attr/borderlessButtonStyle"
-        android:background="@color/bright_foreground_material_dark" />
+        android:id="@+id/textView"
+        android:layout_marginTop="16dp"
+        android:textSize="20sp"
+        android:textColor="#003333"
+        android:layout_below="@+id/progressBar"
+        android:layout_alignParentStart="true" />
 
 </RelativeLayout>

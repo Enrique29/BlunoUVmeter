@@ -31,11 +31,11 @@ public class MainActivity  extends BlunoLibrary {
 		int color = 0xFF00FF00;
 		ProgressBar.getIndeterminateDrawable().setColorFilter(color, PorterDuff.Mode.SRC_IN);
 		ProgressBar.getProgressDrawable().setColorFilter(color, PorterDuff.Mode.SRC_IN);
-		ProgressBar.setScaleY(5f);
+		ProgressBar.setScaleY(6f);
         serialBegin(115200);													//set the Uart Baudrate on BLE chip to 115200
 
         serialReceivedText=(TextView) findViewById(R.id.serialReveicedText);	//initial the EditText of the received data
-        serialSendText=(EditText) findViewById(R.id.serialSendText);			//initial the EditText of the sending data
+        		//initial the EditText of the sending data
 
         buttonSerialSend = (Button) findViewById(R.id.buttonSerialSend);		//initial the button for sending the data
         buttonSerialSend.setOnClickListener(new OnClickListener() {
